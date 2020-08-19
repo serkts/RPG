@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/serk/Desktop/Monogame/RPG/Content/brick.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/brick.xnb","TextureProcessor","Texture2DContent",167,4181,0.2877913
+"/home/serk/Desktop/Monogame/RPG/Content/water.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/water.xnb","TextureProcessor","Texture2DContent",382,8277,0.0022961
