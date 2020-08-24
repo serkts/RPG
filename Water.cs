@@ -11,6 +11,7 @@ namespace RPG
         Rectangle f1 = new Rectangle(0, 0, 32, 32);
         Rectangle f2 = new Rectangle(32, 0, 32, 32);
         Rectangle current;
+        
         public Water()
         {
             current = f1;

@@ -23,3 +23,6 @@
 /home/serk/Desktop/Monogame/RPG/obj/Debug/netcoreapp3.1/RPG.genruntimeconfig.cache
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/brick.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/water.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/grass.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/wall.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/wood.xnb

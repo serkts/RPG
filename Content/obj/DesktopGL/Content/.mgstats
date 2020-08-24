@@ -1,3 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/home/serk/Desktop/Monogame/RPG/Content/brick.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/brick.xnb","TextureProcessor","Texture2DContent",167,4181,0.2877913
-"/home/serk/Desktop/Monogame/RPG/Content/water.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/water.xnb","TextureProcessor","Texture2DContent",382,8277,0.0022961
+"/home/serk/Desktop/Monogame/RPG/Content/brick.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/brick.xnb","TextureProcessor","Texture2DContent",278,16469,0.2706596
+"/home/serk/Desktop/Monogame/RPG/Content/grass.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/grass.xnb","TextureProcessor","Texture2DContent",577,16469,0.2591847
+"/home/serk/Desktop/Monogame/RPG/Content/wall.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/wall.xnb","TextureProcessor","Texture2DContent",278,16469,0.0028493
+"/home/serk/Desktop/Monogame/RPG/Content/water.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/water.xnb","TextureProcessor","Texture2DContent",548,32853,0.0027802
+"/home/serk/Desktop/Monogame/RPG/Content/wood.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/wood.xnb","TextureProcessor","Texture2DContent",508,16469,0.0072819

@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -6,10 +7,13 @@ namespace RPG
 {
     public class Game1 : Game
     {
+        public static int WIDTH = 1280;
+        public static int HEIGHT = 768;
+
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        Water water;
 
+        Level lvl1;
 
         public Game1()
         {
@@ -20,20 +24,22 @@ namespace RPG
 
         protected override void Initialize()
         {
-            _graphics.PreferredBackBufferWidth = 1280;
-            _graphics.PreferredBackBufferHeight = 736;
+            _graphics.PreferredBackBufferWidth = WIDTH;
+            _graphics.PreferredBackBufferHeight = HEIGHT;
             _graphics.IsFullScreen = false;
             _graphics.ApplyChanges();
 
-            water = new Water();            
+            lvl1 = new Level("Content/lvl1.csv");
+            lvl1.Initialize();
+
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            water.LoadContent(Content);
 
+            lvl1.LoadContent(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -42,7 +48,6 @@ namespace RPG
                 Exit();
 
             // TODO: Add your update logic here
-            water.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -51,7 +56,9 @@ namespace RPG
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin();
-            water.Draw(_spriteBatch);
+
+            lvl1.Draw(_spriteBatch);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
