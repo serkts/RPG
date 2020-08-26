@@ -15,6 +15,7 @@ namespace RPG
         String filename;
         char[,] types;
         String[] line;
+        Player player;
 
         public Level(String f)
         {
@@ -28,6 +29,7 @@ namespace RPG
             blockY = 50;
             tiles = new Tile[blockX, blockY];
             types = new char[blockY, blockX];
+            player = new Player(Vector2.Zero);
 
         }
         public void LoadContent(ContentManager content)
@@ -50,11 +52,19 @@ namespace RPG
                     tiles[x, y] = new Tile(new Vector2(x * tileSize, y * tileSize), types[y, x]);
             foreach (Tile tile in tiles)
                 tile.LoadContent(content);
+            player.LoadContent(content);
         }
+
+        public void Update(GameTime gt)
+        {
+            player.Update(gt);
+        }
+
         public void Draw(SpriteBatch sb)
         {
             foreach (Tile tile in tiles)
                 tile.Draw(sb);
+            player.Draw(sb);
         }
     }
 }

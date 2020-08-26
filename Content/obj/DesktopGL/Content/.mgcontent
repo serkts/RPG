@@ -6,11 +6,19 @@
   <SourceFiles>
     <File>/home/serk/Desktop/Monogame/RPG/Content/brick.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/grass.png</File>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/player.png</File>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/playerleft.png</File>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/playerright.png</File>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/playerup.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/wall.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/water.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/wood.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

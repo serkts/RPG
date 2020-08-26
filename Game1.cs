@@ -47,7 +47,8 @@ namespace RPG
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            lvl1.Update(gameTime);
+            
             base.Update(gameTime);
         }
 

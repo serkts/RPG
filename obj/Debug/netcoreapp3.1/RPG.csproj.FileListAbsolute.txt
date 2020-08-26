@@ -26,3 +26,7 @@
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/grass.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/wall.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/wood.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/player.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/playerup.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/playerleft.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/playerright.xnb
