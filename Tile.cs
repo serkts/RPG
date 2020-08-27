@@ -14,7 +14,7 @@ namespace RPG
         public Tile(Vector2 p, char t)
         {
             pos = p;
-            type = t;
+            type = t;  //the character determines what type of block it is.
         }
 
         public Rectangle Rect
@@ -24,6 +24,7 @@ namespace RPG
 
         public void LoadContent(ContentManager content)
         {
+            //this is executed per tile to determine its type, as noted in the lvl1.cs file.
             switch (type)
             {
                 case 'g':
@@ -42,12 +43,12 @@ namespace RPG
                     texture = content.Load<Texture2D>("wood");
                     break;
             }
-            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
+            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);  //each tile's rectangle is static so it's only loaded once in LoadContent
         }
 
         public char Type
         {
-            get { return type; }
+            get { return type; }  //used to retreive type for special tile properties
         }
 
         public void Draw(SpriteBatch sb)

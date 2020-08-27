@@ -29,7 +29,7 @@ namespace RPG
             _graphics.IsFullScreen = false;
             _graphics.ApplyChanges();
 
-            lvl1 = new Level("Content/lvl1.csv");
+            lvl1 = new Level("Content/lvl1.csv");  //loads level1 file from directory
             lvl1.Initialize();
 
             base.Initialize();
@@ -56,11 +56,7 @@ namespace RPG
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin();
-
             lvl1.Draw(_spriteBatch);
-
-            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

@@ -17,6 +17,9 @@ namespace RPG
         float speed;
         KeyboardState ks;
 
+        public Vector2 Position { get { return pos; } }
+        public Rectangle Rectangle { get {return rect;} }
+
         public Player(Vector2 p)
         {
             pos = p;
@@ -25,6 +28,7 @@ namespace RPG
 
         public void LoadContent(ContentManager content)
         {
+            //inefficient way to determine which texture to draw, so this is temporary
             texture = content.Load<Texture2D>("player");
             up = content.Load<Texture2D>("playerup");
             down = content.Load<Texture2D>("player");
@@ -34,10 +38,11 @@ namespace RPG
 
         public void Update(GameTime gt)
         {
-            var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;
+            var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;  //delta is used to keep everything consisten around the 60fps mark
 
             ks = Keyboard.GetState();
 
+            //movement keyinputs
             if(ks.IsKeyDown(Keys.Up))
             {
                 pos.Y -= speed * delta;
@@ -58,6 +63,12 @@ namespace RPG
                 pos.X += speed * delta;
                 texture = right;
             }
+
+            //sprinting
+            if (ks.IsKeyDown(Keys.LeftShift))
+                speed = 5f;
+            else speed = 3f;
+
             rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
         }
 

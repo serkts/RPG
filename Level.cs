@@ -16,6 +16,7 @@ namespace RPG
         char[,] types;
         String[] line;
         Player player;
+        Camera camera;
 
         public Level(String f)
         {
@@ -24,17 +25,18 @@ namespace RPG
 
         public void Initialize()
         {
-            tileSize = 64;
-            blockX = 50;
-            blockY = 50;
+            tileSize = 64;  //pixel size of the tile (64 x 64)
+            blockX = 50; //# of tiles on the map X
+            blockY = 50; //# of tiles on the map Y
             tiles = new Tile[blockX, blockY];
             types = new char[blockY, blockX];
             player = new Player(Vector2.Zero);
+            camera = new Camera();
 
         }
         public void LoadContent(ContentManager content)
         {
-
+            //loading the map from a file, split by commas
             using (StreamReader reader = new StreamReader(filename))
             {
                 while (!reader.EndOfStream)
@@ -47,6 +49,7 @@ namespace RPG
                     }
                 }
             }
+            //initializes each tile as per the level file
             for (int y = 0; y < blockY; y++)
                 for (int x = 0; x < blockX; x++)
                     tiles[x, y] = new Tile(new Vector2(x * tileSize, y * tileSize), types[y, x]);
@@ -58,13 +61,17 @@ namespace RPG
         public void Update(GameTime gt)
         {
             player.Update(gt);
+            camera.Follow(player);
         }
 
         public void Draw(SpriteBatch sb)
         {
+            //transform matrix used to account for the camera in the level
+            sb.Begin(transformMatrix: camera.Transform);
             foreach (Tile tile in tiles)
                 tile.Draw(sb);
             player.Draw(sb);
+            sb.End();
         }
     }
 }
