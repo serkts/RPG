@@ -14,11 +14,14 @@ namespace RPG
         Texture2D right;
         Vector2 pos;
         Rectangle rect;
+        Rectangle hitbox;
         float speed;
         KeyboardState ks;
 
-        public Vector2 Position { get { return pos; } }
+        public Vector2 Position { get { return pos; } set { pos = value; } }
         public Rectangle Rectangle { get {return rect;} }
+        public Rectangle Hitbox { get { return hitbox; } }
+
 
         public Player(Vector2 p)
         {
@@ -39,10 +42,17 @@ namespace RPG
         public void Update(GameTime gt)
         {
             var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;  //delta is used to keep everything consisten around the 60fps mark
+            
+            Move(delta);
 
+            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
+            hitbox = new Rectangle((int)pos.X, (int)pos.Y + texture.Height / 2, texture.Width, texture.Height / 2);
+        }
+
+        public void Move(float delta)
+        {
             ks = Keyboard.GetState();
 
-            //movement keyinputs
             if(ks.IsKeyDown(Keys.Up))
             {
                 pos.Y -= speed * delta;
@@ -68,8 +78,6 @@ namespace RPG
             if (ks.IsKeyDown(Keys.LeftShift))
                 speed = 5f;
             else speed = 3f;
-
-            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
         }
 
         public void Draw(SpriteBatch sb)

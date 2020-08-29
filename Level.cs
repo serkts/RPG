@@ -18,6 +18,8 @@ namespace RPG
         Player player;
         Camera camera;
 
+        Water water = new Water();
+
         public Level(String f)
         {
             filename = f;
@@ -56,12 +58,15 @@ namespace RPG
             foreach (Tile tile in tiles)
                 tile.LoadContent(content);
             player.LoadContent(content);
+            water.LoadContent(content);
         }
 
         public void Update(GameTime gt)
         {
             player.Update(gt);
             camera.Follow(player);
+
+            water.Update(gt);
         }
 
         public void Draw(SpriteBatch sb)
@@ -70,6 +75,7 @@ namespace RPG
             sb.Begin(transformMatrix: camera.Transform);
             foreach (Tile tile in tiles)
                 tile.Draw(sb);
+            water.Draw(sb);
             player.Draw(sb);
             sb.End();
         }

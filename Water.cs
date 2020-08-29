@@ -7,27 +7,22 @@ namespace RPG
     class Water
     {
         Texture2D texture;
-        double timeSinceLast = 0;
-        Rectangle f1 = new Rectangle(0, 0, 32, 32);
-        Rectangle f2 = new Rectangle(32, 0, 32, 32);
-        Rectangle current;
-        
-        public Water()
-        {
-            current = f1;
-        }
+        AnimatedSprite animsprite; 
+
+
 
         public void LoadContent(ContentManager content)
         {
             texture = content.Load<Texture2D>("water");
+            animsprite = new AnimatedSprite(texture, 1, 2);
         }
         public void Update(GameTime gt)
         {
-            
+            animsprite.Update(gt);
         }
         public void Draw(SpriteBatch sb)
         {
-            
+            animsprite.Draw(sb, new Vector2(400,400));
         }
     }
 }
