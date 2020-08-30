@@ -10,6 +10,7 @@ namespace RPG
         Vector2 pos;
         Rectangle rect;
         char type;
+        AnimatedSprite animsprite;
 
         public Tile(Vector2 p, char t)
         {
@@ -32,6 +33,7 @@ namespace RPG
                     break;
                 case 'w':
                     texture = content.Load<Texture2D>("water");
+                    animsprite = new AnimatedSprite(texture, 1, 2);
                     break;
                 case 'b':
                     texture = content.Load<Texture2D>("brick");
@@ -51,9 +53,20 @@ namespace RPG
             get { return type; }  //used to retreive type for special tile properties
         }
 
+        public void Update (GameTime gt)
+        {
+            if (type == 'w')
+                animsprite.Update(gt);
+        }
+
         public void Draw(SpriteBatch sb)
         {
-            sb.Draw(texture, rect, Color.White);
+            if (type == 'w')
+            {
+                animsprite.Draw(sb, pos);
+            }
+            else 
+                sb.Draw(texture, rect, Color.White);
         }
     }
 }
