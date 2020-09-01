@@ -18,9 +18,19 @@ namespace RPG
         float speed;
         KeyboardState ks;
 
+        bool collidedRight;
+        bool collidedLeft;
+        bool collidedUp;
+        bool collidedDown;
+
         public Vector2 Position { get { return pos; } set { pos = value; } }
-        public Rectangle Rectangle { get {return rect;} }
+        public Rectangle Rectangle { get { return rect; } }
         public Rectangle Hitbox { get { return hitbox; } }
+        
+        public bool CollidedRight { set { collidedRight = value; } }
+        public bool CollidedLeft { set { collidedLeft = value; } }
+        public bool CollidedUp { set { collidedUp = value; } }
+        public bool CollidedDown { set { collidedDown = value; } }
 
 
         public Player(Vector2 p)
@@ -42,7 +52,7 @@ namespace RPG
         public void Update(GameTime gt)
         {
             var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;  //delta is used to keep everything consisten around the 60fps mark
-            
+
             Move(delta);
 
             rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
@@ -55,23 +65,55 @@ namespace RPG
 
             if(ks.IsKeyDown(Keys.Up))
             {
-                pos.Y -= speed * delta;
-                texture = up;
+                if (collidedUp)
+                {
+                    pos.Y += 0;
+                    collidedUp = false;
+                }
+                else 
+                {
+                    pos.Y -= speed * delta;
+                    texture = up;
+                }
             }
             if(ks.IsKeyDown(Keys.Down))
             {
-                pos.Y += speed * delta;
-                texture = down;
+                if (collidedDown)
+                {
+                    pos.Y -= 0;
+                    collidedDown = false;
+                }
+                else 
+                {
+                    pos.Y += speed * delta;
+                    texture = down;
+                }
             }
             if(ks.IsKeyDown(Keys.Left))
             {
-                pos.X -= speed * delta;
-                texture = left;
+                if (collidedLeft)
+                {
+                    pos.X += 0;
+                    collidedLeft = false;
+                }
+                else 
+                {
+                    pos.X -= speed * delta;
+                    texture = left;
+                }
             }
             if(ks.IsKeyDown(Keys.Right))
             {
-                pos.X += speed * delta;
-                texture = right;
+                if (collidedRight)
+                {
+                    pos.X -= 0;
+                    collidedRight = false;
+                }
+                else 
+                {
+                    pos.X += speed * delta;
+                    texture = right;
+                }
             }
 
             //sprinting

@@ -24,7 +24,7 @@ namespace RPG
         public void Update(GameTime gt)
         {
             elapsedTime += gt.ElapsedGameTime.TotalMilliseconds;
-            if (elapsedTime >= 1000)
+            if (elapsedTime >= 800)
             {
                 currentFrame ++;
                 elapsedTime = 0;

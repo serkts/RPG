@@ -30,7 +30,7 @@ namespace RPG
             blockY = 50; //# of tiles on the map Y
             tiles = new Tile[blockX, blockY];
             types = new char[blockY, blockX];
-            player = new Player(Vector2.Zero);
+            player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
 
         }
@@ -63,7 +63,53 @@ namespace RPG
             player.Update(gt);
             camera.Follow(player);
             foreach (Tile tile in tiles)
+            {
                 tile.Update(gt);
+                if (tile.Collision)
+                {
+                    if (collidedRight(player.Hitbox, tile.Rect))
+                    {
+                        player.CollidedRight = true;
+                    }
+                    if (collidedLeft(player.Hitbox, tile.Rect))
+                    {
+                        player.CollidedLeft = true;
+                    }
+                    if (collidedUp(player.Hitbox, tile.Rect))
+                    {
+                        player.CollidedUp = true;
+                    }
+                    if (collidedDown(player.Hitbox, tile.Rect))
+                    {
+                        player.CollidedDown = true;
+                    }
+                }
+            }
+            if (player.Position.X <= 0)
+                player.CollidedLeft = true;
+            if (player.Hitbox.Right >= tileSize * blockX)
+                player.CollidedRight = true;
+            if (player.Hitbox.Top <= 0)
+                player.CollidedUp = true;
+            if (player.Hitbox.Bottom >= tileSize * blockY)
+                player.CollidedDown = true;
+        }
+
+        protected bool collidedRight(Rectangle hitbox, Rectangle rectangle)
+        {
+            return hitbox.Right >= rectangle.Left && hitbox.Right <= rectangle.Right && hitbox.Center.Y >= rectangle.Top && hitbox.Center.Y  <= rectangle.Bottom;
+        }
+        protected bool collidedLeft(Rectangle hitbox, Rectangle rectangle)
+        {
+            return hitbox.Left <= rectangle.Right && hitbox.Left >= rectangle.Left && hitbox.Center.Y >= rectangle.Top && hitbox.Center.Y  <= rectangle.Bottom;        
+        }
+        protected bool collidedUp(Rectangle hitbox, Rectangle rectangle)
+        {
+            return hitbox.Top <= rectangle.Bottom && hitbox.Top >= rectangle.Top && hitbox.Center.X >= rectangle.Left && hitbox.Center.X <= rectangle.Right;
+        }
+        protected bool collidedDown(Rectangle hitbox, Rectangle rectangle)
+        {
+            return hitbox.Bottom >= rectangle.Top && hitbox.Bottom <= rectangle.Bottom && hitbox.Center.X >= rectangle.Left && hitbox.Center.X <= rectangle.Right;
         }
 
         public void Draw(SpriteBatch sb)
