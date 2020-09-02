@@ -18,6 +18,8 @@ namespace RPG
         Player player;
         Camera camera;
 
+        Tree tree;
+
         public Level(String f)
         {
             filename = f;
@@ -32,7 +34,7 @@ namespace RPG
             types = new char[blockY, blockX];
             player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
-
+            tree = new Tree(new Vector2(13 * tileSize, 3* tileSize));
         }
         public void LoadContent(ContentManager content)
         {
@@ -56,6 +58,7 @@ namespace RPG
             foreach (Tile tile in tiles)
                 tile.LoadContent(content);
             player.LoadContent(content);
+            tree.LoadContent(content);
         }
 
         public void Update(GameTime gt)
@@ -68,21 +71,13 @@ namespace RPG
                 if (tile.Collision)
                 {
                     if (collidedRight(player.Hitbox, tile.Rect))
-                    {
                         player.CollidedRight = true;
-                    }
                     if (collidedLeft(player.Hitbox, tile.Rect))
-                    {
                         player.CollidedLeft = true;
-                    }
                     if (collidedUp(player.Hitbox, tile.Rect))
-                    {
                         player.CollidedUp = true;
-                    }
                     if (collidedDown(player.Hitbox, tile.Rect))
-                    {
                         player.CollidedDown = true;
-                    }
                 }
             }
             if (player.Position.X <= 0)
@@ -92,6 +87,15 @@ namespace RPG
             if (player.Hitbox.Top <= 0)
                 player.CollidedUp = true;
             if (player.Hitbox.Bottom >= tileSize * blockY)
+                player.CollidedDown = true;
+
+            if (collidedRight(player.Hitbox, tree.Hitbox))
+                player.CollidedRight = true;
+            if (collidedLeft(player.Hitbox, tree.Hitbox))
+                player.CollidedLeft = true;
+            if (collidedUp(player.Hitbox, tree.Hitbox))
+                player.CollidedUp = true;
+            if (collidedDown(player.Hitbox, tree.Hitbox))
                 player.CollidedDown = true;
         }
 
@@ -118,7 +122,16 @@ namespace RPG
             sb.Begin(transformMatrix: camera.Transform);
             foreach (Tile tile in tiles)
                 tile.Draw(sb);
-            player.Draw(sb);
+            if (player.Hitbox.Bottom >= tree.Hitbox.Bottom)
+            {
+                tree.Draw(sb);
+                player.Draw(sb);
+            }
+            else
+            {
+                player.Draw(sb);
+                tree.Draw(sb);
+            }
             sb.End();
         }
     }
