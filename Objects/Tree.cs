@@ -19,7 +19,7 @@ namespace RPG
         }
         public void LoadContent(ContentManager content)
         {
-            texture = content.Load<Texture2D>("tree");
+            texture = content.Load<Texture2D>("eleaf");
             rectangle = new Rectangle((int) position.X, (int) position.Y, texture.Width, texture.Height);
             hitbox = new Rectangle(rectangle.X + 32, rectangle.Y + 96, 32, 32);
         }

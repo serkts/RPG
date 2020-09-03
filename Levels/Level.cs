@@ -19,6 +19,7 @@ namespace RPG
         Camera camera;
 
         Tree tree;
+        ObjectLoader treeloader;
 
         public Level(String f)
         {
@@ -35,6 +36,7 @@ namespace RPG
             player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
             tree = new Tree(new Vector2(13 * tileSize, 3* tileSize));
+            treeloader = new ObjectLoader();
         }
         public void LoadContent(ContentManager content)
         {
@@ -59,6 +61,7 @@ namespace RPG
                 tile.LoadContent(content);
             player.LoadContent(content);
             tree.LoadContent(content);
+            treeloader.LoadContent(content);
         }
 
         public void Update(GameTime gt)
@@ -132,6 +135,7 @@ namespace RPG
                 player.Draw(sb);
                 tree.Draw(sb);
             }
+            treeloader.Draw(sb);
             sb.End();
         }
     }

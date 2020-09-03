@@ -31,3 +31,4 @@
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/playerleft.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/playerright.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/tree.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/eleaf.xnb
