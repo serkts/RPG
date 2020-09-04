@@ -122,9 +122,9 @@ namespace RPG
             else speed = 3f;
         }
 
-        public void Draw(SpriteBatch sb)
+        public void Draw(SpriteBatch sb, float layer)
         {
-            sb.Draw(texture, rect, Color.White);
+            sb.Draw(texture, rect, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, layer);
         }
     }
 }

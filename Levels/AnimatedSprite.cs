@@ -43,7 +43,7 @@ namespace RPG
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
 
-            sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
+            sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0f);
         }
     }
 }

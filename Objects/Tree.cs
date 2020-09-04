@@ -24,9 +24,9 @@ namespace RPG
             hitbox = new Rectangle(rectangle.X + 32, rectangle.Y + 96, 32, 32);
         }
 
-        public void Draw(SpriteBatch sb)
+        public void Draw(SpriteBatch sb, float layer)
         {
-            sb.Draw(texture, rectangle, Color.White);
+            sb.Draw(texture, rectangle, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, layer);
         }
     }
 }

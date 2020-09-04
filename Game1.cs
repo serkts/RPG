@@ -48,7 +48,7 @@ namespace RPG
                 Exit();
 
             lvl1.Update(gameTime);
-            
+
             base.Update(gameTime);
         }
 

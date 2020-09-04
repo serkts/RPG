@@ -19,7 +19,12 @@ namespace RPG
         Camera camera;
 
         Tree tree;
-        ObjectLoader treeloader;
+        TreeLoader treeloader;
+        Rectangle[] treeboxes;
+        int treeCount = 20;
+
+        float treeLayer;
+        float playerLayer;
 
         public Level(String f)
         {
@@ -36,7 +41,7 @@ namespace RPG
             player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
             tree = new Tree(new Vector2(13 * tileSize, 3* tileSize));
-            treeloader = new ObjectLoader();
+            treeloader = new TreeLoader(1);
         }
         public void LoadContent(ContentManager content)
         {
@@ -62,6 +67,7 @@ namespace RPG
             player.LoadContent(content);
             tree.LoadContent(content);
             treeloader.LoadContent(content);
+            treeboxes = treeloader.Hitboxes;
         }
 
         public void Update(GameTime gt)
@@ -92,14 +98,31 @@ namespace RPG
             if (player.Hitbox.Bottom >= tileSize * blockY)
                 player.CollidedDown = true;
 
-            if (collidedRight(player.Hitbox, tree.Hitbox))
-                player.CollidedRight = true;
-            if (collidedLeft(player.Hitbox, tree.Hitbox))
-                player.CollidedLeft = true;
-            if (collidedUp(player.Hitbox, tree.Hitbox))
-                player.CollidedUp = true;
-            if (collidedDown(player.Hitbox, tree.Hitbox))
-                player.CollidedDown = true;
+            foreach (Rectangle treebox in treeboxes)
+            {
+                if (collidedRight(player.Hitbox, treebox))
+                    player.CollidedRight = true;
+                if (collidedLeft(player.Hitbox, treebox))
+                    player.CollidedLeft = true;
+                if (collidedUp(player.Hitbox, treebox))
+                    player.CollidedUp = true;
+                if (collidedDown(player.Hitbox, treebox))
+                    player.CollidedDown = true;
+
+                if (player.Hitbox.Bottom >= treebox.Bottom)
+                {
+                    playerLayer = 0.2f;
+                    treeLayer = 0.1f;
+                }
+                else
+                {
+                    playerLayer = 0.1f;
+                    treeLayer = 0.2f;
+                }
+                treeCount++;
+            }
+            if (treeCount == 20)
+                treeCount = 0;         
         }
 
         protected bool collidedRight(Rectangle hitbox, Rectangle rectangle)
@@ -122,20 +145,11 @@ namespace RPG
         public void Draw(SpriteBatch sb)
         {
             //transform matrix used to account for the camera in the level
-            sb.Begin(transformMatrix: camera.Transform);
+            sb.Begin(SpriteSortMode.FrontToBack, transformMatrix: camera.Transform);
             foreach (Tile tile in tiles)
                 tile.Draw(sb);
-            if (player.Hitbox.Bottom >= tree.Hitbox.Bottom)
-            {
-                tree.Draw(sb);
-                player.Draw(sb);
-            }
-            else
-            {
-                player.Draw(sb);
-                tree.Draw(sb);
-            }
-            treeloader.Draw(sb);
+            player.Draw(sb, playerLayer);
+            treeloader.Draw(sb, treeLayer);
             sb.End();
         }
     }

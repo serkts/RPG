@@ -73,7 +73,7 @@ namespace RPG
                 animsprite.Draw(sb, pos);
             }
             else 
-                sb.Draw(texture, rect, Color.White);
+                sb.Draw(texture, rect, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0f);
         }
     }
 }
