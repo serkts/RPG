@@ -18,10 +18,10 @@ namespace RPG
         Player player;
         Camera camera;
 
-        Tree tree;
         TreeLoader treeloader;
         Rectangle[] treeboxes;
         int treeCount = 20;
+        Bush bush;
 
         float treeLayer;
         float playerLayer;
@@ -40,8 +40,8 @@ namespace RPG
             types = new char[blockY, blockX];
             player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
-            tree = new Tree(new Vector2(13 * tileSize, 3* tileSize));
             treeloader = new TreeLoader(1);
+            bush = new Bush(new Vector2(12 * tileSize, 1 * tileSize));
         }
         public void LoadContent(ContentManager content)
         {
@@ -65,9 +65,9 @@ namespace RPG
             foreach (Tile tile in tiles)
                 tile.LoadContent(content);
             player.LoadContent(content);
-            tree.LoadContent(content);
             treeloader.LoadContent(content);
             treeboxes = treeloader.Hitboxes;
+            bush.LoadContent(content);
         }
 
         public void Update(GameTime gt)
@@ -150,6 +150,7 @@ namespace RPG
                 tile.Draw(sb);
             player.Draw(sb, playerLayer);
             treeloader.Draw(sb, treeLayer);
+            bush.Draw(sb);
             sb.End();
         }
     }
