@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/home/serk/Desktop/Monogame/RPG/Content/brick.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/brick.xnb","TextureProcessor","Texture2DContent",278,16469,0.2706596
-"/home/serk/Desktop/Monogame/RPG/Content/bush.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/bush.xnb","TextureProcessor","Texture2DContent",655,32853,0.5485942
+"/home/serk/Desktop/Monogame/RPG/Content/bush.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/bush.xnb","TextureProcessor","Texture2DContent",686,32853,0.2569899
 "/home/serk/Desktop/Monogame/RPG/Content/eleaf.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/eleaf.xnb","TextureProcessor","Texture2DContent",1924,49237,0.2541872
 "/home/serk/Desktop/Monogame/RPG/Content/flower.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/flower.xnb","TextureProcessor","Texture2DContent",1252,16469,0.686614
 "/home/serk/Desktop/Monogame/RPG/Content/grass.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/grass.xnb","TextureProcessor","Texture2DContent",577,16469,0.2591847
