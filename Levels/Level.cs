@@ -17,6 +17,7 @@ namespace RPG
         String[] line;
         Player player;
         Camera camera;
+        SpriteFont spriteFont;
 
         TreeLoader treeloader;
         Rectangle[] treeboxes;
@@ -68,6 +69,7 @@ namespace RPG
             treeboxes = treeloader.Hitboxes;
             bushLoader.LoadContent(content);
             bushboxes = bushLoader.Hitboxes;
+            spriteFont = content.Load<SpriteFont>("position");
         }
 
         public void Update(GameTime gt)
@@ -143,9 +145,9 @@ namespace RPG
 
 
             if (treeCount == 20)
-                treeCount = 0;    
+                treeCount = 0;
             if (bushCount == 20)
-                bushCount = 0;     
+                bushCount = 0;
         }
 
         protected bool collidedRight(Rectangle hitbox, Rectangle rectangle)
@@ -174,6 +176,7 @@ namespace RPG
             player.Draw(sb);
             treeloader.Draw(sb);
             bushLoader.Draw(sb);
+            sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 3.2f, player.Position.Y - Game1.HEIGHT / 3.5f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
             sb.End();
         }
     }

@@ -121,6 +121,13 @@
 /processorParam:TextureFormat=Color
 /build:playerup.png
 
+#begin position.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:position.spritefont
+
 #begin tree.png
 /importer:TextureImporter
 /processor:TextureProcessor

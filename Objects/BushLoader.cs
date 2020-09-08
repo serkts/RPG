@@ -10,8 +10,8 @@ namespace RPG
         int level;
         int count = 0;
         Bush[] bushes;
-        float[] lvl1X = new float[20]{11, 14, 20, 25, 29, 3, 6, 37.5f, 32, 39, 29, 45, 8, 6, 12, 19, 42, 18, 31, 38};
-        float[] lvl1Y = new float[20]{2, 4, 2, 4, 2, 16, 32, 14.5f, 20, 28, 36, 46, 37, 29, 45, 47, 47, 19, 15, 21};
+        float[] lvl1X = new float[20]{11, 14, 21, 25, 28,  3,  6, 37, 32, 46, 32, 41, 11, 13, 19, 18, 31, 16.5f, 31, 43};
+        float[] lvl1Y = new float[20]{ 4,  2,  5,  2,  4, 18, 35, 10, 28, 39, 36, 45, 18, 27, 37, 45, 45,    21, 19, 20};
         Rectangle[] hitboxes = new Rectangle[20];
         public Rectangle[] Hitboxes { get { return hitboxes; } }
 

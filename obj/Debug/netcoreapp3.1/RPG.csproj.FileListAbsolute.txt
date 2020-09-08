@@ -34,3 +34,6 @@
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/eleaf.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/flower.xnb
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/bush.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/default.spritefont
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/position.spritefont
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/position.xnb

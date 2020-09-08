@@ -10,7 +10,7 @@ namespace RPG
         Vector2 position;
         Rectangle rectangle;
         Rectangle hitbox;
-        float layer; 
+        float layer;
 
         public Rectangle Hitbox { get { return hitbox; } }
         public float Layer { get { return layer; } set { layer = value; } }
@@ -24,7 +24,7 @@ namespace RPG
         {
             texture = content.Load<Texture2D>("bush");
             rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
-            hitbox = new Rectangle(rectangle.X, rectangle.Y + 18, rectangle.Width, rectangle.Height - 18);
+            hitbox = new Rectangle(rectangle.X, rectangle.Y + 30, rectangle.Width, rectangle.Height - 30);
             layer = 0.1f;
         }
 

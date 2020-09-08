@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/serk/Desktop/Monogame/RPG/Content/brick.png</SourceFile>
-  <SourceTime>2020-01-17T11:58:22.297522-05:00</SourceTime>
-  <DestFile>/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/brick.xnb</DestFile>
-  <DestTime>2020-09-05T21:51:56.7378091-04:00</DestTime>
+  <SourceFile>/home/serk/Desktop/Monogame/RPG/Content/playerleft.png</SourceFile>
+  <SourceTime>2020-08-26T00:45:35.9440842-04:00</SourceTime>
+  <DestFile>/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/playerleft.xnb</DestFile>
+  <DestTime>2020-09-05T21:51:56.8938094-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
