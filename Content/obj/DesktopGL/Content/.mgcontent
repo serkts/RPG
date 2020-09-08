@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/bed.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/brick.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/bush.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/eleaf.png</File>
@@ -20,6 +21,7 @@
     <File>/home/serk/Desktop/Monogame/RPG/Content/wood.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

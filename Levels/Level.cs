@@ -26,6 +26,9 @@ namespace RPG
         int treeCount = 0;
         int bushCount = 0;
 
+        House house1;
+        House house2;
+
         public Level(String f)
         {
             filename = f;
@@ -42,6 +45,8 @@ namespace RPG
             camera = new Camera();
             treeloader = new TreeLoader(1);
             bushLoader = new BushLoader(1);
+            house1 = new House(new Vector2(2 * tileSize, tileSize), 7, 5, 'r');
+            house2 = new House(new Vector2(31 * tileSize, tileSize), 7, 5, 'l');
         }
         public void LoadContent(ContentManager content)
         {
@@ -70,6 +75,8 @@ namespace RPG
             bushLoader.LoadContent(content);
             bushboxes = bushLoader.Hitboxes;
             spriteFont = content.Load<SpriteFont>("position");
+            house1.LoadContent(content);
+            house2.LoadContent(content);
         }
 
         public void Update(GameTime gt)
@@ -142,7 +149,23 @@ namespace RPG
                 }
                 bushCount++;
             }
+            if (collidedRight(player.Hitbox, house1.BedHitbox))
+                player.CollidedRight = true;
+            if (collidedLeft(player.Hitbox, house1.BedHitbox))
+                player.CollidedLeft = true;
+            if (collidedUp(player.Hitbox, house1.BedHitbox))
+                player.CollidedUp = true;
+            if (collidedDown(player.Hitbox, house1.BedHitbox))
+                player.CollidedDown = true;
 
+            if (collidedRight(player.Hitbox, house2.BedHitbox))
+                player.CollidedRight = true;
+            if (collidedLeft(player.Hitbox, house2.BedHitbox))
+                player.CollidedLeft = true;
+            if (collidedUp(player.Hitbox, house2.BedHitbox))
+                player.CollidedUp = true;
+            if (collidedDown(player.Hitbox, house2.BedHitbox))
+                player.CollidedDown = true;
 
             if (treeCount == 20)
                 treeCount = 0;
@@ -177,6 +200,8 @@ namespace RPG
             treeloader.Draw(sb);
             bushLoader.Draw(sb);
             sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 3.2f, player.Position.Y - Game1.HEIGHT / 3.5f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
+            house1.Draw(sb);
+            house2.Draw(sb);
             sb.End();
         }
     }

@@ -37,3 +37,4 @@
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/default.spritefont
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/position.spritefont
 /home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/position.xnb
+/home/serk/Desktop/Monogame/RPG/bin/Debug/netcoreapp3.1/Content/bed.xnb
