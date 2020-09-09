@@ -53,6 +53,10 @@ namespace RPG
                     texture = content.Load<Texture2D>("flower");
                     collision = false;
                     break;
+                case 'k':
+                    texture = content.Load<Texture2D>("kitchen");
+                    collision = false;
+                    break;
             }
             rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);  //each tile's rectangle is static so it's only loaded once in LoadContent
             if (type == 'w')

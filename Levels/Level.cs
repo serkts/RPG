@@ -87,16 +87,7 @@ namespace RPG
             {
                 tile.Update(gt);
                 if (tile.Collision)
-                {
-                    if (collidedRight(player.Hitbox, tile.Rect))
-                        player.CollidedRight = true;
-                    if (collidedLeft(player.Hitbox, tile.Rect))
-                        player.CollidedLeft = true;
-                    if (collidedUp(player.Hitbox, tile.Rect))
-                        player.CollidedUp = true;
-                    if (collidedDown(player.Hitbox, tile.Rect))
-                        player.CollidedDown = true;
-                }
+                    Collided(player.Hitbox, tile.Rect);
             }
             if (player.Position.X <= 0)
                 player.CollidedLeft = true;
@@ -109,68 +100,45 @@ namespace RPG
 
             foreach (Rectangle treebox in treeboxes)
             {
-                if (collidedRight(player.Hitbox, treebox))
-                    player.CollidedRight = true;
-                if (collidedLeft(player.Hitbox, treebox))
-                    player.CollidedLeft = true;
-                if (collidedUp(player.Hitbox, treebox))
-                    player.CollidedUp = true;
-                if (collidedDown(player.Hitbox, treebox))
-                    player.CollidedDown = true;
-
+                Collided(player.Hitbox, treebox);
                 if (player.Hitbox.Bottom >= treebox.Bottom)
-                {
                     treeloader.Zorder(treeCount, 0.1f);
-                }
                 else
-                {
                     treeloader.Zorder(treeCount, 0.3f);
-                }
                 treeCount++;
             }
             foreach (Rectangle bushbox in bushboxes)
             {
-                if (collidedRight(player.Hitbox, bushbox))
-                    player.CollidedRight = true;
-                if (collidedLeft(player.Hitbox, bushbox))
-                    player.CollidedLeft = true;
-                if (collidedUp(player.Hitbox, bushbox))
-                    player.CollidedUp = true;
-                if (collidedDown(player.Hitbox, bushbox))
-                    player.CollidedDown = true;
-
+                Collided(player.Hitbox, bushbox);
                 if (player.Hitbox.Bottom >= bushbox.Bottom)
-                {
                     bushLoader.Zorder(bushCount, 0.1f);
-                }
                 else
-                {
                     bushLoader.Zorder(bushCount, 0.3f);
-                }
                 bushCount++;
             }
-            if (collidedRight(player.Hitbox, house1.BedHitbox))
-                player.CollidedRight = true;
-            if (collidedLeft(player.Hitbox, house1.BedHitbox))
-                player.CollidedLeft = true;
-            if (collidedUp(player.Hitbox, house1.BedHitbox))
-                player.CollidedUp = true;
-            if (collidedDown(player.Hitbox, house1.BedHitbox))
-                player.CollidedDown = true;
-
-            if (collidedRight(player.Hitbox, house2.BedHitbox))
-                player.CollidedRight = true;
-            if (collidedLeft(player.Hitbox, house2.BedHitbox))
-                player.CollidedLeft = true;
-            if (collidedUp(player.Hitbox, house2.BedHitbox))
-                player.CollidedUp = true;
-            if (collidedDown(player.Hitbox, house2.BedHitbox))
-                player.CollidedDown = true;
+            Collided(player.Hitbox, house1.BedHitbox);
+            Collided(player.Hitbox, house2.BedHitbox);
+            Collided(player.Hitbox, house1.TableHitbox);
+            Collided(player.Hitbox, house2.TableHitbox);
+            Collided(player.Hitbox, house1.ChairHitbox);
+            Collided(player.Hitbox, house2.ChairHitbox);
 
             if (treeCount == 20)
                 treeCount = 0;
             if (bushCount == 20)
                 bushCount = 0;
+        }
+
+        void Collided(Rectangle r1, Rectangle r2)
+        {
+            if (collidedRight(r1, r2))
+                player.CollidedRight = true;
+            if (collidedLeft(r1, r2))
+                player.CollidedLeft = true;
+            if (collidedUp(r1, r2))
+                player.CollidedUp = true;
+            if (collidedDown(r1, r2))
+                player.CollidedDown = true;
         }
 
         protected bool collidedRight(Rectangle hitbox, Rectangle rectangle)

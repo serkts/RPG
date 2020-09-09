@@ -4,24 +4,23 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace RPG
 {
-    public class Bed
+    public class Chair
     {
         Texture2D texture;
         Vector2 position;
         Rectangle rectangle;
-        Rectangle hitbox;
-        public Rectangle Hitbox { get { return hitbox; } }
 
-        public Bed(Vector2 p)
+        public Rectangle Hitbox { get { return rectangle; } }
+
+        public Chair(Vector2 p)
         {
             position = p;
         }
 
         public void LoadContent(ContentManager content)
         {
-            texture = content.Load<Texture2D>("bed");
+            texture = content.Load<Texture2D>("chair");
             rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
-            hitbox = new Rectangle(rectangle.X + 8, rectangle.Y + 16, 48, 102);
         }
 
         public void Draw(SpriteBatch sb)
