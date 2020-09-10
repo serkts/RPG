@@ -2,7 +2,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "/home/serk/Desktop/Monogame/RPG/Content/bed.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/bed.xnb","TextureProcessor","Texture2DContent",573,32853,0.1611201
 "/home/serk/Desktop/Monogame/RPG/Content/brick.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/brick.xnb","TextureProcessor","Texture2DContent",278,16469,0.2706596
 "/home/serk/Desktop/Monogame/RPG/Content/bush.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/bush.xnb","TextureProcessor","Texture2DContent",686,32853,0.2569899
-"/home/serk/Desktop/Monogame/RPG/Content/chair.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/chair.xnb","TextureProcessor","Texture2DContent",341,8277,0.3092698
+"/home/serk/Desktop/Monogame/RPG/Content/chair.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/chair.xnb","TextureProcessor","Texture2DContent",439,8277,0.182498
 "/home/serk/Desktop/Monogame/RPG/Content/eleaf.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/eleaf.xnb","TextureProcessor","Texture2DContent",1924,49237,0.2541872
 "/home/serk/Desktop/Monogame/RPG/Content/flower.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/flower.xnb","TextureProcessor","Texture2DContent",1252,16469,0.686614
 "/home/serk/Desktop/Monogame/RPG/Content/grass.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/grass.xnb","TextureProcessor","Texture2DContent",577,16469,0.2591847
@@ -12,7 +12,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "/home/serk/Desktop/Monogame/RPG/Content/playerright.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/playerright.xnb","TextureProcessor","Texture2DContent",967,8277,0.002048
 "/home/serk/Desktop/Monogame/RPG/Content/playerup.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/playerup.xnb","TextureProcessor","Texture2DContent",792,8277,0.0018037
 "/home/serk/Desktop/Monogame/RPG/Content/position.spritefont","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/position.xnb","FontDescriptionProcessor","SpriteFontContent",2433,21538,0.4159144
-"/home/serk/Desktop/Monogame/RPG/Content/table.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",393,16469,0.0021148
+"/home/serk/Desktop/Monogame/RPG/Content/table.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",491,16469,0.0020846
 "/home/serk/Desktop/Monogame/RPG/Content/tree.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/tree.xnb","TextureProcessor","Texture2DContent",1541,49237,0.2790351
 "/home/serk/Desktop/Monogame/RPG/Content/wall.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/wall.xnb","TextureProcessor","Texture2DContent",278,16469,0.0028493
 "/home/serk/Desktop/Monogame/RPG/Content/water.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/water.xnb","TextureProcessor","Texture2DContent",548,32853,0.0027802
