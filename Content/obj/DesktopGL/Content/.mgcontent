@@ -4,24 +4,24 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/bed.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/brick.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/bush.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/chair.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/eleaf.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/flower.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/grass.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/kitchen.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/player.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerleft.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerright.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerup.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/position.spritefont</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/table.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/tree.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/wall.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/water.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/wood.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/bed.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/brick.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/bush.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/chair.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/eleaf.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/flower.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/grass.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/kitchen.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/player.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/playerleft.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/playerright.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/playerup.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/position.spritefont</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/table.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/tree.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/wall.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/water.png</File>
+    <File>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/wood.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

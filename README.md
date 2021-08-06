@@ -1,6 +1,5 @@
 # RPG
-My personal action RPG project
+My personal RPG project
 
-This Game is supposed to be similar to A Link to the Past where you control a character who will be doing various quests.
+This project was initially going to be an action RPG style game with real time combat but I'm currently working on converting it to a turn based RPG with a simple battle system.  
 
-My main goal is to write a working tile engine that can import map files and complete a working game, even if production quaity is low.

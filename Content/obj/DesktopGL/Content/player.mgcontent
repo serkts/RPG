@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/serk/Desktop/Monogame/RPG/Content/player.png</SourceFile>
-  <SourceTime>2020-08-25T23:47:22.3474078-04:00</SourceTime>
-  <DestFile>/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/player.xnb</DestFile>
-  <DestTime>2020-08-25T23:57:28.3654017-04:00</DestTime>
+  <SourceFile>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/player.png</SourceFile>
+  <SourceTime>2021-05-21T00:28:19.0877985-04:00</SourceTime>
+  <DestFile>C:/Users/serkt/Desktop/Projects/RPG/RPG/Content/bin/DesktopGL/Content/player.xnb</DestFile>
+  <DestTime>2021-08-05T20:51:18.014337-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
