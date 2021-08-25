@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "anqAahg0GYMmQZLDLOrAL/w7xmQhG+5KAXZPhD903wPkGrPslTY7mq+kutN8tw9SFmqgBI0j0OPYmuJL2grg2A==",
+  "dgSpecHash": "PxhSYK1v2y9MXTLl9kdPOQ5SFOSLqQ7chjBbJYpIkt6vuGOLa5OoB+d0gsX50UfPA6EHSWUqE+x9+BQ4Ou564Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serkt\\Desktop\\Projects\\RPG\\RPG\\RPG.csproj",
+  "projectFilePath": "/home/serk/Desktop/Monogame/RPG/RPG.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\serkt\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\serkt\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    "/home/serk/.nuget/packages/monogame.content.builder.task/3.8.0.1641/monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "/home/serk/.nuget/packages/monogame.framework.desktopgl/3.8.0.1641/monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

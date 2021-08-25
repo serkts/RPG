@@ -174,19 +174,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\serkt\\.nuget\\packages\\": {}
+    "/home/serk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serkt\\Desktop\\Projects\\RPG\\RPG\\RPG.csproj",
+      "projectUniqueName": "/home/serk/Desktop/Monogame/RPG/RPG.csproj",
       "projectName": "RPG",
-      "projectPath": "C:\\Users\\serkt\\Desktop\\Projects\\RPG\\RPG\\RPG.csproj",
-      "packagesPath": "C:\\Users\\serkt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serkt\\Desktop\\Projects\\RPG\\RPG\\obj\\",
+      "projectPath": "/home/serk/Desktop/Monogame/RPG/RPG.csproj",
+      "packagesPath": "/home/serk/.nuget/packages/",
+      "outputPath": "/home/serk/Desktop/Monogame/RPG/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\serkt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/serk/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -196,7 +196,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -208,7 +207,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
@@ -234,7 +232,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.412/RuntimeIdentifierGraph.json"
       }
     }
   }
