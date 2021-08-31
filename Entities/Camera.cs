@@ -5,7 +5,7 @@ namespace RPG
     public class Camera
     {
         public Matrix Transform { get; private set; }
-        float scale = 1.5f;
+        float scale = 1f;
         public void Follow (Player target)
         {
             var position = Matrix.CreateTranslation(-target.Position.X - (target.Rectangle.Width / 2), 

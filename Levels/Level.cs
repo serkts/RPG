@@ -167,7 +167,7 @@ namespace RPG
             player.Draw(sb);
             treeloader.Draw(sb);
             bushLoader.Draw(sb);
-            sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 3.2f, player.Position.Y - Game1.HEIGHT / 3.5f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
+            sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 2.1f, player.Position.Y - Game1.HEIGHT / 2.3f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
             house1.Draw(sb);
             house2.Draw(sb);
             sb.End();
