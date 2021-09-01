@@ -12,10 +12,7 @@
     <File>/home/serk/Desktop/Monogame/RPG/Content/flower.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/grass.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/kitchen.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/player.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerleft.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerright.png</File>
-    <File>/home/serk/Desktop/Monogame/RPG/Content/playerup.png</File>
+    <File>/home/serk/Desktop/Monogame/RPG/Content/playerSheet.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/position.spritefont</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/table.png</File>
     <File>/home/serk/Desktop/Monogame/RPG/Content/tree.png</File>
@@ -24,9 +21,6 @@
     <File>/home/serk/Desktop/Monogame/RPG/Content/wood.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

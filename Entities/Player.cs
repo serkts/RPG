@@ -7,14 +7,14 @@ namespace RPG
 {
     public class Player
     {
+        const int playerWidth = 48;
+        const int playerHeight = 96;
+
         Texture2D texture;
-        Texture2D up;
-        Texture2D down;
-        Texture2D left;
-        Texture2D right;
         Vector2 pos;
         Rectangle rect;
         Rectangle hitbox;
+        Rectangle sourceRect;  //used to determine which cell of the spritesheet to draw
         float speed;
         KeyboardState ks;
 
@@ -41,22 +41,19 @@ namespace RPG
 
         public void LoadContent(ContentManager content)
         {
-            //inefficient way to determine which texture to draw, so this is temporary
-            texture = content.Load<Texture2D>("player");
-            up = content.Load<Texture2D>("playerup");
-            down = content.Load<Texture2D>("player");
-            left = content.Load<Texture2D>("playerleft");
-            right = content.Load<Texture2D>("playerright");
+            texture = content.Load<Texture2D>("playerSheet");
+            sourceRect = new Rectangle(0, 0, playerWidth, playerHeight);  //sets the source rectangle to the first cell of the spritesheet
         }
 
         public void Update(GameTime gt)
         {
-            var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;  //delta is used to keep everything consisten around the 60fps mark
+            var delta = 60 * (float)gt.ElapsedGameTime.TotalSeconds;  //delta is used to keep everything consistent around the 60fps mark
 
             Move(delta);
 
-            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
-            hitbox = new Rectangle((int)pos.X, (int)pos.Y + texture.Height / 2, texture.Width, texture.Height / 2);
+            rect = new Rectangle((int)pos.X, (int)pos.Y, texture.Width / 4, texture.Height);  //width divided by the number of cells for the sprite
+            hitbox = new Rectangle((int)pos.X, (int)pos.Y + texture.Height / 2, texture.Width / 4, texture.Height / 2);
+
         }
 
         public void Move(float delta)
@@ -73,7 +70,7 @@ namespace RPG
                 else 
                 {
                     pos.Y -= speed * delta;
-                    texture = up;
+                    sourceRect.X = 3 * playerWidth; //number of cell (0-3) multiplied by cell width
                 }
             }
             if(ks.IsKeyDown(Keys.Down))
@@ -86,7 +83,7 @@ namespace RPG
                 else 
                 {
                     pos.Y += speed * delta;
-                    texture = down;
+                    sourceRect.X = 0;
                 }
             }
             if(ks.IsKeyDown(Keys.Left))
@@ -99,7 +96,7 @@ namespace RPG
                 else 
                 {
                     pos.X -= speed * delta;
-                    texture = left;
+                    sourceRect.X = playerWidth;
                 }
             }
             if(ks.IsKeyDown(Keys.Right))
@@ -112,7 +109,7 @@ namespace RPG
                 else 
                 {
                     pos.X += speed * delta;
-                    texture = right;
+                    sourceRect.X = 2 * playerWidth;
                 }
             }
 
@@ -124,7 +121,7 @@ namespace RPG
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Draw(texture, rect, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.2f);
+            sb.Draw(texture, rect, sourceRect, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.2f);
         }
     }
 }
