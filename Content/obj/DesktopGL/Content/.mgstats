@@ -7,9 +7,11 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "/home/serk/Desktop/Monogame/RPG/Content/flower.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/flower.xnb","TextureProcessor","Texture2DContent",1252,16469,0.0025579
 "/home/serk/Desktop/Monogame/RPG/Content/grass.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/grass.xnb","TextureProcessor","Texture2DContent",577,16469,0.0024424
 "/home/serk/Desktop/Monogame/RPG/Content/kitchen.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/kitchen.xnb","TextureProcessor","Texture2DContent",527,16469,0.0025111
+"/home/serk/Desktop/Monogame/RPG/Content/npc1.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/npc1.xnb","TextureProcessor","Texture2DContent",1097,18517,0.2543827
 "/home/serk/Desktop/Monogame/RPG/Content/playerSheet.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/playerSheet.xnb","TextureProcessor","Texture2DContent",4684,73813,0.2730927
 "/home/serk/Desktop/Monogame/RPG/Content/position.spritefont","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/position.xnb","FontDescriptionProcessor","SpriteFontContent",2431,21538,0.4552278
 "/home/serk/Desktop/Monogame/RPG/Content/table.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/table.xnb","TextureProcessor","Texture2DContent",491,16469,0.001464
+"/home/serk/Desktop/Monogame/RPG/Content/textbox.spritefont","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/textbox.xnb","FontDescriptionProcessor","SpriteFontContent",2008,70690,0.4322586
 "/home/serk/Desktop/Monogame/RPG/Content/tree.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/tree.xnb","TextureProcessor","Texture2DContent",1541,49237,0.0030555
 "/home/serk/Desktop/Monogame/RPG/Content/wall.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/wall.xnb","TextureProcessor","Texture2DContent",278,16469,0.002394
 "/home/serk/Desktop/Monogame/RPG/Content/water.png","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/water.xnb","TextureProcessor","Texture2DContent",548,32853,0.0025172

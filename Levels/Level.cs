@@ -16,8 +16,13 @@ namespace RPG
         char[,] types;
         String[] line;
         Player player;
+        Npc npc1;
+        Textbox npcText;
+        bool drawText;
+
         Camera camera;
         SpriteFont spriteFont;
+        //float framerate;
 
         TreeLoader treeloader;
         Rectangle[] treeboxes;
@@ -47,6 +52,8 @@ namespace RPG
             bushLoader = new BushLoader(1);
             house1 = new House(new Vector2(2 * tileSize, tileSize), 7, 5, 'r');
             house2 = new House(new Vector2(31 * tileSize, tileSize), 7, 5, 'l');
+            npc1 = new Npc(new Vector2(10 * tileSize, 5 * tileSize));
+            npcText = new Textbox(new Vector2(npc1.Position.X - 4 * tileSize, npc1.Position.Y - tileSize), "Hello traveler! What brings you here today?");
         }
         public void LoadContent(ContentManager content)
         {
@@ -77,11 +84,15 @@ namespace RPG
             spriteFont = content.Load<SpriteFont>("position");
             house1.LoadContent(content);
             house2.LoadContent(content);
+            npc1.LoadContent(content);
+            npcText.LoadContent(content);
         }
 
         public void Update(GameTime gt)
         {
+            //framerate = 1 / (float)gt.ElapsedGameTime.TotalSeconds;
             player.Update(gt);
+            npc1.Update(gt);
             camera.Follow(player);
             foreach (Tile tile in tiles)
             {
@@ -122,12 +133,26 @@ namespace RPG
             Collided(player.Hitbox, house2.TableHitbox);
             Collided(player.Hitbox, house1.ChairHitbox);
             Collided(player.Hitbox, house2.ChairHitbox);
+            Collided(player.Hitbox, npc1.Rectangle);
+            if (player.Hitbox.Bottom >= npc1.Rectangle.Bottom)
+                    npc1.Zorder(0.1f);
+                else
+                    npc1.Zorder(0.3f);
+
+            //textbox
+            if (collidedRight(player.Hitbox, npc1.Rectangle) || collidedLeft(player.Hitbox, npc1.Rectangle) || collidedUp(player.Hitbox, npc1.Rectangle))
+            {
+                drawText = true;
+            } else drawText = false;
 
             if (treeCount == 20)
                 treeCount = 0;
             if (bushCount == 20)
                 bushCount = 0;
+
+            
         }
+
 
         void Collided(Rectangle r1, Rectangle r2)
         {
@@ -168,8 +193,12 @@ namespace RPG
             treeloader.Draw(sb);
             bushLoader.Draw(sb);
             sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 2.1f, player.Position.Y - Game1.HEIGHT / 2.3f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
+            //sb.DrawString(spriteFont, "fps: " + framerate, new Vector2(player.Position.X - Game1.WIDTH / 2.1f, player.Position.Y - Game1.HEIGHT / 2.6f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
             house1.Draw(sb);
             house2.Draw(sb);
+            npc1.Draw(sb);
+            if (drawText)
+                npcText.Draw(sb);
             sb.End();
         }
     }
