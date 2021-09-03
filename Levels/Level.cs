@@ -34,6 +34,8 @@ namespace RPG
         House house1;
         House house2;
 
+        LoadingZone zone1;
+
         public Level(String f)
         {
             filename = f;
@@ -54,6 +56,7 @@ namespace RPG
             house2 = new House(new Vector2(31 * tileSize, tileSize), 7, 5, 'l');
             npc1 = new Npc(new Vector2(10 * tileSize, 5 * tileSize));
             npcText = new Textbox(new Vector2(npc1.Position.X - 4 * tileSize, npc1.Position.Y - tileSize), "Hello traveler! What brings you here today?");
+            zone1 = new LoadingZone(0, 7, 1, 2);
         }
         public void LoadContent(ContentManager content)
         {
@@ -150,6 +153,8 @@ namespace RPG
             if (bushCount == 20)
                 bushCount = 0;
 
+            if (player.Hitbox.Intersects(zone1.Area))
+                Console.WriteLine("inside loading zone");
             
         }
 
