@@ -10,9 +10,13 @@ namespace RPG
     {
         int blockX;
         int blockY;
-        int tileSize;
+        const int tileSize = 64;
+
         Tile[,] tiles;
-        String filename;
+
+        String tileMap;
+        String levelSettings;
+
         char[,] types;
         String[] line;
         Player player;
@@ -31,29 +35,30 @@ namespace RPG
         int treeCount = 0;
         int bushCount = 0;
 
-        House house1;
-        House house2;
-
         LoadingZone zone1;
 
-        public Level(String f)
+        public Level(String map, String settings)
         {
-            filename = f;
+            tileMap = map;
+            levelSettings = settings;
         }
 
         public void Initialize()
         {
-            tileSize = 64;  //pixel size of the tile (64 x 64)
-            blockX = 50; //# of tiles on the map X
-            blockY = 50; //# of tiles on the map Y
+            
+            using (StreamReader reader = new StreamReader(levelSettings))
+            {
+                string strMapWidth = reader.ReadLine();
+                blockX = Int32.Parse(strMapWidth.Substring(strMapWidth.IndexOf("=") + 1));
+                string strMapHeight = reader.ReadLine();
+                blockY = Int32.Parse(strMapHeight.Substring(strMapHeight.IndexOf("=") + 1));
+            }
             tiles = new Tile[blockX, blockY];
             types = new char[blockY, blockX];
             player = new Player(new Vector2(5 * tileSize, 7 * tileSize));
             camera = new Camera();
-            treeloader = new TreeLoader(1);
-            bushLoader = new BushLoader(1);
-            house1 = new House(new Vector2(2 * tileSize, tileSize), 7, 5, 'r');
-            house2 = new House(new Vector2(31 * tileSize, tileSize), 7, 5, 'l');
+            treeloader = new TreeLoader(levelSettings);
+            bushLoader = new BushLoader(levelSettings);
             npc1 = new Npc(new Vector2(10 * tileSize, 5 * tileSize));
             npcText = new Textbox(new Vector2(npc1.Position.X - 4 * tileSize, npc1.Position.Y - tileSize), "Hello traveler! What brings you here today?");
             zone1 = new LoadingZone(0, 7, 1, 2);
@@ -61,7 +66,7 @@ namespace RPG
         public void LoadContent(ContentManager content)
         {
             //loading the map from a file, split by commas
-            using (StreamReader reader = new StreamReader(filename))
+            using (StreamReader reader = new StreamReader(tileMap))
             {
                 while (!reader.EndOfStream)
                 {
@@ -85,10 +90,9 @@ namespace RPG
             bushLoader.LoadContent(content);
             bushboxes = bushLoader.Hitboxes;
             spriteFont = content.Load<SpriteFont>("position");
-            house1.LoadContent(content);
-            house2.LoadContent(content);
             npc1.LoadContent(content);
             npcText.LoadContent(content);
+            
         }
 
         public void Update(GameTime gt)
@@ -130,12 +134,6 @@ namespace RPG
                     bushLoader.Zorder(bushCount, 0.3f);
                 bushCount++;
             }
-            Collided(player.Hitbox, house1.BedHitbox);
-            Collided(player.Hitbox, house2.BedHitbox);
-            Collided(player.Hitbox, house1.TableHitbox);
-            Collided(player.Hitbox, house2.TableHitbox);
-            Collided(player.Hitbox, house1.ChairHitbox);
-            Collided(player.Hitbox, house2.ChairHitbox);
             Collided(player.Hitbox, npc1.Rectangle);
             if (player.Hitbox.Bottom >= npc1.Rectangle.Bottom)
                     npc1.Zorder(0.1f);
@@ -199,8 +197,6 @@ namespace RPG
             bushLoader.Draw(sb);
             sb.DrawString(spriteFont, "x: " + (int)player.Position.X / tileSize + "\ny: " + (int)player.Position.Y / tileSize, new Vector2(player.Position.X - Game1.WIDTH / 2.1f, player.Position.Y - Game1.HEIGHT / 2.3f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
             //sb.DrawString(spriteFont, "fps: " + framerate, new Vector2(player.Position.X - Game1.WIDTH / 2.1f, player.Position.Y - Game1.HEIGHT / 2.6f), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.5f);
-            house1.Draw(sb);
-            house2.Draw(sb);
             npc1.Draw(sb);
             if (drawText)
                 npcText.Draw(sb);

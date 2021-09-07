@@ -29,7 +29,7 @@ namespace RPG
             _graphics.IsFullScreen = false;
             _graphics.ApplyChanges();
 
-            lvl1 = new Level("Content/lvl1.csv");  //loads level1 file from directory
+            lvl1 = new Level("Levels/LevelFiles/town.csv", "Levels/LevelFiles/town.lvl");  //loads level1 file from directory
             lvl1.Initialize();
 
             base.Initialize();
