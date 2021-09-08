@@ -28,21 +28,7 @@ namespace RPG
             {
                 case ("Levels/LevelFiles/town.lvl"):
                 {
-                    using (StreamReader reader = new StreamReader("Levels/LevelFiles/townTrees.csv"))
-                    {
-                        string[] xLine = reader.ReadLine().Split(',');
-                        xCoordinates = new float[xLine.Length];
-                        for (int i = 0; i < xLine.Length; i++)
-                            xCoordinates[i] = float.Parse(xLine[i]);
-                        string[] yLine = reader.ReadLine().Split(',');
-                        yCoordinates = new float[yLine.Length];
-                        for (int i = 0; i < yLine.Length; i++)
-                            yCoordinates[i] = float.Parse(yLine[i]);
-                    }
-                    trees = new Tree[xCoordinates.Length];
-                    for (int i = 0; i < xCoordinates.Length; i++)
-                        trees[i] = new Tree(new Vector2(xCoordinates[i] * tileSize, yCoordinates[i] * tileSize));
-                    hitboxes = new Rectangle[xCoordinates.Length];
+                    ReadData("Levels/LevelFiles/townTrees.csv");
                     break;
                 }
             }
@@ -58,6 +44,25 @@ namespace RPG
         public void Zorder(int c, float l)
         {
             trees[c].Layer = l;
+        }
+
+        private void ReadData(string filename)
+        {
+            using (StreamReader reader = new StreamReader(filename))
+            {
+                string[] xLine = reader.ReadLine().Split(',');
+                xCoordinates = new float[xLine.Length];
+                for (int i = 0; i < xLine.Length; i++)
+                    xCoordinates[i] = float.Parse(xLine[i]);
+                string[] yLine = reader.ReadLine().Split(',');
+                yCoordinates = new float[yLine.Length];
+                for (int i = 0; i < yLine.Length; i++)
+                    yCoordinates[i] = float.Parse(yLine[i]);
+            }
+            trees = new Tree[xCoordinates.Length];
+            for (int i = 0; i < xCoordinates.Length; i++)
+                trees[i] = new Tree(new Vector2(xCoordinates[i] * tileSize, yCoordinates[i] * tileSize));
+            hitboxes = new Rectangle[xCoordinates.Length];
         }
 
         public void Draw(SpriteBatch sb)
