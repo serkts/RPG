@@ -22,5 +22,7 @@ namespace RPG
         }
 
         public Rectangle Area { get { return rectangle; } }
+        public int Y { get { return y; } }
+        public int X { get { return x; } }
     }
 }

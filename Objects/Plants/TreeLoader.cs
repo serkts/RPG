@@ -26,9 +26,14 @@ namespace RPG
         {
             switch (level)
             {
-                case ("Levels/LevelFiles/town.lvl"):
+                case ("Content/LevelFiles/Town/town.lvl"):
                 {
-                    ReadData("Levels/LevelFiles/townTrees.csv");
+                    ReadData("Content/LevelFiles/Town/townTrees.csv");
+                    break;
+                }
+                case ("Content/LevelFiles/Forest/forest.lvl"):
+                {
+                    ReadData("Content/LevelFiles/Forest/forestTrees.csv");
                     break;
                 }
             }

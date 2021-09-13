@@ -13,7 +13,7 @@ namespace RPG
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        Level lvl1;
+        LevelManager levelManager;
 
         public Game1()
         {
@@ -29,8 +29,8 @@ namespace RPG
             _graphics.IsFullScreen = false;
             _graphics.ApplyChanges();
 
-            lvl1 = new Level("Levels/LevelFiles/town.csv", "Levels/LevelFiles/town.lvl");  //loads level1 file from directory
-            lvl1.Initialize();
+            levelManager = new LevelManager(Content);
+            levelManager.Initialize();
 
             base.Initialize();
         }
@@ -39,7 +39,7 @@ namespace RPG
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            lvl1.LoadContent(Content);
+            levelManager.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)
@@ -47,7 +47,7 @@ namespace RPG
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            lvl1.Update(gameTime);
+            levelManager.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -56,7 +56,7 @@ namespace RPG
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            lvl1.Draw(_spriteBatch);
+            levelManager.Draw(_spriteBatch);
 
             base.Draw(gameTime);
         }

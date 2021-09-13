@@ -23,7 +23,8 @@ namespace RPG
         bool collidedUp;
         bool collidedDown;
 
-        public Vector2 Position { get { return pos; } set { pos = value; } }
+        public Vector2 Position { get { return pos; } set { pos.X = value.X; pos.Y = value.Y; } }
+
         public Rectangle Rectangle { get { return rect; } }
         public Rectangle Hitbox { get { return hitbox; } }
         
