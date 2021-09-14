@@ -1,9 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.csv","CopyItem","File",1250,1250,0.0021353
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.lvl","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.lvl","CopyItem","File",49,49,0.0010617
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forestBushes.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forestBushes.csv","CopyItem","File",42,42,0.000215
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forestTrees.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forestTrees.csv","CopyItem","File",42,42,0.0002478
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.csv","CopyItem","File",5000,5000,0.002347
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.lvl","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.lvl","CopyItem","File",50,50,0.0002288
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/townBushes.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/townBushes.csv","CopyItem","File",114,114,0.000263
-"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/townTrees.csv","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/townTrees.csv","CopyItem","File",115,115,0.0002199
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.bush","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.bush","CopyItem","File",42,42,0.0003762
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.lvl","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.lvl","CopyItem","File",1250,1250,0.000941
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.settings","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.settings","CopyItem","File",49,49,0.0011464
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Forest/forest.tree","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Forest/forest.tree","CopyItem","File",42,42,0.0002287
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.bush","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.bush","CopyItem","File",114,114,0.0001775
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.lvl","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.lvl","CopyItem","File",5000,5000,0.0004409
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.settings","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.settings","CopyItem","File",50,50,0.0002539
+"/home/serk/Desktop/Monogame/RPG/Content/LevelFiles/Town/town.tree","/home/serk/Desktop/Monogame/RPG/Content/bin/DesktopGL/Content/LevelFiles/Town/town.tree","CopyItem","File",115,115,0.0001856

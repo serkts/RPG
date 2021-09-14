@@ -109,29 +109,29 @@
 /processorParam:TextureFormat=Color
 /build:kitchen.png
 
-#begin LevelFiles/Forest/forest.csv
-/copy:LevelFiles/Forest/forest.csv
-
 #begin LevelFiles/Forest/forest.lvl
 /copy:LevelFiles/Forest/forest.lvl
 
-#begin LevelFiles/Forest/forestBushes.csv
-/copy:LevelFiles/Forest/forestBushes.csv
+#begin LevelFiles/Forest/forest.settings
+/copy:LevelFiles/Forest/forest.settings
 
-#begin LevelFiles/Forest/forestTrees.csv
-/copy:LevelFiles/Forest/forestTrees.csv
+#begin LevelFiles/Forest/forest.bush
+/copy:LevelFiles/Forest/forest.bush
 
-#begin LevelFiles/Town/town.csv
-/copy:LevelFiles/Town/town.csv
+#begin LevelFiles/Forest/forest.tree
+/copy:LevelFiles/Forest/forest.tree
 
 #begin LevelFiles/Town/town.lvl
 /copy:LevelFiles/Town/town.lvl
 
-#begin LevelFiles/Town/townBushes.csv
-/copy:LevelFiles/Town/townBushes.csv
+#begin LevelFiles/Town/town.settings
+/copy:LevelFiles/Town/town.settings
 
-#begin LevelFiles/Town/townTrees.csv
-/copy:LevelFiles/Town/townTrees.csv
+#begin LevelFiles/Town/town.bush
+/copy:LevelFiles/Town/town.bush
+
+#begin LevelFiles/Town/town.tree
+/copy:LevelFiles/Town/town.tree
 
 #begin npc1.png
 /importer:TextureImporter
